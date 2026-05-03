@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* i gave the body a space background, and fixed the position and colors for the overall body.  */
+
+        body {
+            background-color: #05070d;
+            background-image: url("milky-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            color: white;
+            font-family: Verdana, sans-serif;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 18px 24px;
+            background-color: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 14px;
+        }
+
+        /* i used a class and named it top-bar for the navigation bar at the top of the page. */
+
+        .site-title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            background-color: rgba(120, 190, 255, 0.25);
+            border-color: rgba(120, 190, 255, 0.8);
+        }
+
+        /* various adjustments for the navigation bar */
+
+        /* Then, i created a section for accessibility tools to align with the additional requirements and to provide a better experience, placing it at the top just below the navbar. */
+
+        .accessibility-tools {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .accessibility-tools button {
+            padding: 10px 16px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            border-radius: 999px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .accessibility-tools button:hover,
+        .accessibility-tools button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+
+        .planetarium {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 35px 25px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .planetarium h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+        }
+
+        .planetarium p {
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 30px 25px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+        }
+
+        .section p {
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .milkyway-image {
+            width: 70%;
+            max-width: 700px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+        }
+
+        /* i added a video for rich media, explaining how the Milky way works. */
+
+        .video {
+            margin-top: 20px;
+        }
+
+        .video iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+        }
+
+        .button-row {
+            margin-top: 25px;
+        }
+
+        /* button to bring users to the planets page. */
+
+        .main-button,
+        .top-button {
+            padding: 12px 22px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            border-radius: 999px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s ease;
+        }
+
+        .main-button:hover,
+        .main-button:focus,
+        .top-button:hover,
+        .top-button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+
+        .top-button {
+            margin: 10px 0 30px;
+        }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .site-title {
+                font-size: 28px;
+            }
+
+            .planetarium h2 {
+                font-size: 28px;
+            }
+
+            .video-box iframe {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div class="container">
+
+        <!-- Basically giving each page the same navbar, container, and buttons for efficiency. -->
+
+        <div class="top-bar">
+            <h1 class="site-title">Big Planetarium</h1>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="planets.html">Planets</a>
+            </nav>
+        </div>
+
+        <!-- Section for accessibility buttons, these include: light mode, dark mode, and a+ a- for text size. -->
+
+        <div class="accessibility-tools">
+            <button onclick="setLightMode()">Light Mode</button>
+            <button onclick="setDarkMode()">Dark Mode</button>
+            <button onclick="increaseText()">A+</button>
+            <button onclick="decreaseText()">A-</button>
+        </div>
+
+        <section class="planetarium">
+            <h2>Welcome to Big Planetarium!</h2>
+            <p>
+                Here in Big Planetarium, we explore the wonders of the Milky Way and our solar system.
+                Our goal is to make space fun, exciting, and easy to understand for everyone.
+            </p>
+
+            <!-- Button to bring users to the planets page. -->
+            <div class="button-row">
+                <a href="planets.html" class="main-button">Explore the Planets</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Explore the Milky Way</h2>
+
+            <p>
+                The milky way is a galaxy that contains our solar system. It is filled with stars, planets, dust, and
+                gas, and it helps us understand how small earth is in our big universe.
+                <br><br>
+            </p>
+
+            <div>
+                <img src="milkyway-image.jpg" alt="Illustration of the Milky Way galaxy" class="milkyway-image">
+            </div>
+            <br><br>
+
+            <p>
+                It is a spiral galaxy, and the sun is about 25,000 light years from the center of the galaxy. The milky
+                way is just one of billions of galaxies in the universe, and it contains hundreds of billions of stars.
+                <br><br>
+                Below is a video that gives a great overview of the Milky Way galaxy and our place within it.
+            </p>
+
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/tj_QPnO8vpQ" title="An overview of the Milky Way galaxy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2>Why Learn About Space?</h2>
+            <p>
+                Learning about space helps us understand our place in the universe and encourages curiosity
+                about science, discovery, and the world beyond Earth.
+            </p>
+        </section>
+
+        <!-- Button using javascript to bring users back to the top of the page. -->
+        <button class="top-button" onclick="backToTop()">Back to Top</button>
+
+    </div>
+
+    <script>
+        let currentFontSize = 17;
+
+        function backToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // tools for light and dark mode, and text size changes. These work by allowing users to interact with the buttons that trigger functions that change the styles of elements on the page.
+
+        function setLightMode() {
+            document.body.style.backgroundImage = "none";
+            document.body.style.backgroundColor = "#ececec";
+            document.body.style.color = "black";
+
+            const boxes = document.querySelectorAll(".planetarium, .section, .planet-box, .planet-section, .top-bar");
+            boxes.forEach(box => {
+                box.style.backgroundColor = "#f8f5ef";
+                box.style.color = "black";
+                box.style.border = "1px solid #cccccc";
+            });
+
+            const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+            links.forEach(link => {
+                link.style.color = "black";
+            });
+
+            const toolButtons = document.querySelectorAll(".accessibility-tools button");
+            toolButtons.forEach(button => {
+                button.style.color = "black";
+                button.style.backgroundColor = "#e0e0e0";
+                button.style.border = "1px solid #999999";
+            });
+        }
+
+        function setDarkMode() {
+            document.body.style.backgroundImage = 'url("milky-bg.jpg")';
+            document.body.style.backgroundColor = "";
+            document.body.style.color = "white";
+
+            const boxes = document.querySelectorAll(".planetarium, .section, .planet-box, .planet-section, .top-bar");
+            boxes.forEach(box => {
+                box.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                box.style.color = "white";
+                box.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+            });
+
+            const topBar = document.querySelector(".top-bar");
+            if (topBar) {
+                topBar.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+            }
+
+            const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+            links.forEach(link => {
+                link.style.color = "white";
+            });
+
+            const toolButtons = document.querySelectorAll(".accessibility-tools button");
+            toolButtons.forEach(button => {
+                button.style.color = "white";
+                button.style.backgroundColor = "rgba(120, 190, 255, 0.18)";
+                button.style.border = "1px solid rgba(120, 190, 255, 0.8)";
+            });
+        }
+
+        function increaseText() {
+            currentFontSize += 2;
+            updateTextSize();
+        }
+
+        function decreaseText() {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                updateTextSize();
+            }
+        }
+
+        function updateTextSize() {
+            document.querySelectorAll("p, li").forEach(element => {
+                element.style.fontSize = currentFontSize + "px";
+            });
+
+            document.querySelectorAll("nav a, button").forEach(element => {
+                element.style.fontSize = (currentFontSize - 1) + "px";
+            });
+
+            document.querySelectorAll("h3").forEach(element => {
+                element.style.fontSize = (currentFontSize + 4) + "px";
+            });
+
+            document.querySelectorAll("h2").forEach(element => {
+                element.style.fontSize = (currentFontSize + 10) + "px";
+            });
+        }
+    </script>
+</body>
+
+</html>

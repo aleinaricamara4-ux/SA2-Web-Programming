@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+
+    <style>
+        body {
+            background-image: url("space background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            color: white;
+            font-family: Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 18px 24px;
+            background-color: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 14px;
+        }
+
+        .site-title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            background-color: rgba(120, 190, 255, 0.25);
+            border-color: rgba(120, 190, 255, 0.8);
+        }
+
+        .planet-box,
+        .section-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .planet-box h2,
+        .section-box h2 {
+            margin-top: 0;
+            font-family: Georgia, serif;
+        }
+
+        .planet-image {
+            width: 230px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin: 15px 0 20px;
+        }
+
+        .section-box p,
+        .planet-box p {
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .facts-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .fact-card {
+            width: 220px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .fact-card h3 {
+            margin-top: 0;
+            font-family: Georgia, serif;
+            font-size: 20px;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            padding: 12px 22px;
+            border-radius: 999px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .back-button:hover,
+        .back-button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+
+        .planet-facts-list {
+            max-width: 760px;
+            margin: 20px auto;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 17px;
+            background-color: rgba(0, 0, 0, 0.35);
+            padding: 20px 30px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="top-bar">
+            <h1 class="site-title">Big Planetarium</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="planets.html" class="active">Planets</a>
+            </nav>
+        </div>
+
+        
+        <section class="planet-box">
+            <h2>Mars</h2>
+            <img src="mars.jpg" alt="Planet Mars" class="planet-image">
+            <ul class="planet-facts-list">
+                <li>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System.</li>
+                <li>It is often called the "Red Planet" because iron oxide on its surface gives it a reddish colour.
+                </li>
+                <li>Mars is a dusty, cold, desert world with a thin atmosphere.</li>
+                <li>It has seasons, polar ice caps, canyons, and extinct volcanoes.</li>
+                <li>Mars has been explored for decades and is one of the most likely places to find evidence of past or
+                    present life beyond Earth.</li>
+            </ul>
+
+        </section>
+
+        <section class="section-box">
+            <h2>Quick Facts</h2>
+
+            <div class="facts-row">
+                <div class="fact-card">
+                    <h3>Position</h3>
+                    <p>The fourth planet from the Sun.</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>Moons</h3>
+                    <p>Mars has two small moons: Phobos and Deimos.</p>
+                </div>
+
+                <div class="fact-card">
+                    <h3>Year Length</h3>
+                    <p>687 Earth days.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-box">
+            <h2>Fun Fact</h2>
+            <p>
+                Mars is home to the largest volcano in the solar system, Olympus Mons.
+            </p>
+        </section>
+
+        <a href="planets.html" class="back-button">Back to Planets</a>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        body {
+            background-image: url("space background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            color: white;
+            font-family: Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 18px 24px;
+            background-color: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 14px;
+        }
+
+
+        .site-title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            background-color: rgba(120, 190, 255, 0.25);
+            border-color: rgba(120, 190, 255, 0.8);
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 30px 25px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-family: Georgia, serif;
+            font-size: 30px;
+        }
+
+        .section p {
+            max-width: 760px;
+            margin: 15px auto;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        /* CSS for the info cards */
+
+        .info-card {
+            width: 280px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .info-card h3 {
+            font-family: Georgia, serif;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .site-title {
+                font-size: 28px;
+            }
+        }
+
+        .accessibility-tools {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .accessibility-tools button {
+            padding: 10px 16px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            border-radius: 999px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .accessibility-tools button:hover,
+        .accessibility-tools button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="top-bar">
+            <h1 class="site-title">Big Planetarium</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="planets.html">Planets</a>
+            </nav>
+        </div>
+
+        <div class="accessibility-tools">
+            <button onclick="setLightMode()">Light Mode</button>
+            <button onclick="setDarkMode()">Dark Mode</button>
+            <button onclick="increaseText()">A+</button>
+            <button onclick="decreaseText()">A-</button>
+        </div>
+
+        <!-- "about us" section. -->
+        <section class="section">
+            <h2>About Us</h2>
+            <p>
+                Big Planetarium is a Bristol-based planetarium that aims to make space exciting, engaging, and
+                accessible for everyone. We use fun and interesting ways to explore science, and we want to inspire
+                curiosity about space while helping people of all ages learn more about the universe around them. We do
+                not want anyone to feel left out of the wonders of space, and we strive to make complicated topics
+                easier to understand.
+            </p>
+            <br>
+            <p>
+                Our website was designed to introduce people to the Milky Way galaxy and the planets
+                within our solar system in a simple way.
+            </p>
+        </section>
+
+
+        <!-- info cards about the planetarium and the organization. -->
+        <div class="info-row">
+            <div class="info-card">
+                <h3>Our Mission</h3>
+                <p>
+                    We want to inspire curiosity about space and help people of all ages learn more
+                    about the universe around them.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>What We Offer</h3>
+                <p>
+                    We provide educational entertainment for the public and for schools, using fun
+                    and engaging ways to explore science.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Why Space?</h3>
+                <p>
+                    Space encourages imagination, discovery, and wonder. It helps us understand both
+                    our planet and our place in the universe.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    let currentFontSize = 17;
+
+    function setLightMode() {
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "#ececec";
+        document.body.style.color = "black";
+
+        const boxes = document.querySelectorAll(".section, .top-bar");
+        boxes.forEach(box => {
+            box.style.backgroundColor = "#f8f5ef";
+            box.style.color = "black";
+            box.style.border = "1px solid #cccccc";
+        });
+
+        const infoCards = document.querySelectorAll(".info-card");
+        infoCards.forEach(card => {
+        card.style.backgroundColor = "#d9d3c7";
+        card.style.color = "black";
+        card.style.border = "1px solid #5f5a52";
+        });
+
+
+        const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+        links.forEach(link => {
+            link.style.color = "black";
+        });
+
+        const toolButtons = document.querySelectorAll(".accessibility-tools button");
+        toolButtons.forEach(button => {
+            button.style.color = "black";
+            button.style.backgroundColor = "#e0e0e0";
+            button.style.border = "1px solid #999999";
+        });
+    }
+
+    function setDarkMode() {
+        document.body.style.backgroundImage = 'url("space background.png")';
+        document.body.style.backgroundColor = "";
+        document.body.style.color = "white";
+
+        const boxes = document.querySelectorAll(".section, .top-bar");
+        boxes.forEach(box => {
+            box.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            box.style.color = "white";
+            box.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+        });
+
+        const infoCards = document.querySelectorAll(".info-card");
+        infoCards.forEach(card => {
+        card.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
+        card.style.color = "white";
+        card.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+        });
+
+
+
+        const topBar = document.querySelector(".top-bar");
+        if (topBar) {
+            topBar.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+        }
+
+        const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+        links.forEach(link => {
+            link.style.color = "white";
+        });
+
+        const toolButtons = document.querySelectorAll(".accessibility-tools button");
+        toolButtons.forEach(button => {
+            button.style.color = "white";
+            button.style.backgroundColor = "rgba(120, 190, 255, 0.18)";
+            button.style.border = "1px solid rgba(120, 190, 255, 0.8)";
+        });
+    }
+
+    function increaseText() {
+        currentFontSize += 2;
+        updateTextSize();
+    }
+
+    function decreaseText() {
+        if (currentFontSize > 12) {
+            currentFontSize -= 2;
+            updateTextSize();
+        }
+    }
+
+    function updateTextSize() {
+        document.querySelectorAll("p, li").forEach(element => {
+            element.style.fontSize = currentFontSize + "px";
+        });
+
+        document.querySelectorAll("nav a, button").forEach(element => {
+            element.style.fontSize = (currentFontSize - 1) + "px";
+        });
+
+        document.querySelectorAll("h3").forEach(element => {
+            element.style.fontSize = (currentFontSize + 4) + "px";
+        });
+
+        document.querySelectorAll("h2").forEach(element => {
+            element.style.fontSize = (currentFontSize + 10) + "px";
+        });
+    }
+</script>

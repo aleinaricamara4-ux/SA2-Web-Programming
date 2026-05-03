@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <style>
+        body {
+            background-image: url("space background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            color: white;
+            font-family: Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 18px 24px;
+            background-color: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 14px;
+        }
+
+
+        .site-title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            background-color: rgba(120, 190, 255, 0.25);
+            border-color: rgba(120, 190, 255, 0.8);
+        }
+
+        .section-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 30px 25px;
+            margin-bottom: 25px;
+        }
+
+        .section-box h2 {
+            margin-top: 0;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 30px;
+        }
+
+        .faq-item {
+            margin: 20px 0;
+            padding: 18px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+        }
+
+        .faq-item h3 {
+            margin-top: 0;
+            font-family: Georgia, serif;
+            font-size: 22px;
+        }
+
+        .faq-item p {
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .site-title {
+                font-size: 28px;
+            }
+        }
+
+        .accessibility-tools {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .accessibility-tools button {
+            padding: 10px 16px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            border-radius: 999px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .accessibility-tools button:hover,
+        .accessibility-tools button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+
+        .top-button {
+            margin: 10px 0 30px;
+            padding: 12px 22px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(120, 190, 255, 0.18);
+            border: 1px solid rgba(120, 190, 255, 0.8);
+            border-radius: 999px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s ease;
+        }
+
+        .top-button:hover,
+        .top-button:focus {
+            background-color: rgba(120, 190, 255, 0.32);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="top-bar">
+            <h1 class="site-title">Big Planetarium</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="FAQ.html" class="active">FAQ</a>
+                <a href="planets.html">Planets</a>
+            </nav>
+        </div>
+
+        <div class="accessibility-tools">
+            <button onclick="setLightMode()">Light Mode</button>
+            <button onclick="setDarkMode()">Dark Mode</button>
+            <button onclick="increaseText()">A+</button>
+            <button onclick="decreaseText()">A-</button>
+        </div>
+
+        <!-- section for the FAQ items -->
+        <section class="section-box">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is the Milky Way?</h3>
+                <p>
+                    The Milky Way is the galaxy that contains our solar system. It is made up of
+                    billions of stars, planets, dust, and gas.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How many planets are in our solar system?</h3>
+                <p>
+                    There are eight planets in our solar system: Mercury, Venus, Earth, Mars,
+                    Jupiter, Saturn, Uranus, and Neptune.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which planet is the largest?</h3>
+                <p>
+                    Jupiter is the largest planet in our solar system.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why is Saturn famous?</h3>
+                <p>
+                    Saturn is well known for its beautiful ring system, which is made mostly of
+                    ice and rock.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why is learning about space important?</h3>
+                <p>
+                    Learning about space helps us understand the universe, encourages curiosity,
+                    and inspires interest in science and discovery.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How fast does our solar system travel?</h3>
+                <p>
+                    Our solar system orbits the center of the milky way galaxy at an average speed of about 829,000 km/h
+                    (515,000 mph).
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long is one galactic year?</h3>
+                <p>
+                    A galactic year is the time it takes for our solar system to complete one orbit around the center of
+                    the Milky Way galaxy, which is approximately 225-250 million Earth years.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How old is the milky way?</h3>
+                <p>
+                    The Milky Way is approximately 13.6 billion years old.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is the Milky Way going to collide with another galaxy?</h3>
+                <p>
+                    Yes, the Milky Way is on a collision course with the Andromeda galaxy. The two galaxies are moving
+                    toward each other at a speed of about 110 kilometers per second (68 miles per second).
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is pluto a planet?</h3>
+                <p>
+                    Pluto is not a part of the 8 major planets, but it is classified as one of the dwarf planet. It is
+                    the ninth-largest object in our solar system and
+                    the third-largest known dwarf planet.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How old is the solar system?</h3>
+                <p>
+                    The solar system is approximately 4.6 billion years old.
+                </p>
+            </div>
+        </section>
+
+        <button class="top-button" onclick="backToTop()">Back to Top</button>
+
+    </div>
+
+    <script>
+        let currentFontSize = 17;
+
+        function backToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function setLightMode() {
+            document.body.style.backgroundImage = "none";
+            document.body.style.backgroundColor = "#ececec";
+            document.body.style.color = "black";
+
+            const boxes = document.querySelectorAll(".section-box, .top-bar");
+            boxes.forEach(box => {
+                box.style.backgroundColor = "#ffffff";
+                box.style.color = "black";
+                box.style.border = "1px solid #cccccc";
+            });
+
+            const faqBoxes = document.querySelectorAll(".faq-item");
+            faqBoxes.forEach(box => {
+                box.style.backgroundColor = "#d9d3c7";
+                box.style.color = "black";
+                box.style.border = "1px solid #5f5a52";
+            });
+
+
+            const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+            links.forEach(link => {
+                link.style.color = "black";
+            });
+
+            const toolButtons = document.querySelectorAll(".accessibility-tools button");
+            toolButtons.forEach(button => {
+                button.style.color = "black";
+                button.style.backgroundColor = "#e0e0e0";
+                button.style.border = "1px solid #999999";
+            });
+        }
+
+        function setDarkMode() {
+            document.body.style.backgroundImage = 'url("space background.png")';
+            document.body.style.backgroundColor = "ececec";
+            document.body.style.color = "white";
+
+            const boxes = document.querySelectorAll(".section-box, .top-bar");
+            boxes.forEach(box => {
+                box.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                box.style.color = "white";
+                box.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+            });
+
+            const topBar = document.querySelector(".top-bar");
+            if (topBar) {
+                topBar.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+            }
+
+            const faqBoxes = document.querySelectorAll(".faq-item");
+            faqBoxes.forEach(box => {
+                box.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
+                box.style.color = "white";
+                box.style.border = "1px solid rgba(255, 255, 255, 0.2)";
+            });
+
+            const links = document.querySelectorAll("nav a, .main-button, .top-button, .back-button");
+            links.forEach(link => {
+                link.style.color = "white";
+            });
+
+            const toolButtons = document.querySelectorAll(".accessibility-tools button");
+            toolButtons.forEach(button => {
+                button.style.color = "white";
+                button.style.backgroundColor = "rgba(120, 190, 255, 0.18)";
+                button.style.border = "1px solid rgba(120, 190, 255, 0.8)";
+            });
+        }
+
+        function increaseText() {
+            currentFontSize += 2;
+            updateTextSize();
+        }
+
+        function decreaseText() {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                updateTextSize();
+            }
+        }
+
+        function updateTextSize() {
+            document.querySelectorAll("p, li").forEach(element => {
+                element.style.fontSize = currentFontSize + "px";
+            });
+
+            document.querySelectorAll("nav a, button").forEach(element => {
+                element.style.fontSize = (currentFontSize - 1) + "px";
+            });
+
+            document.querySelectorAll("h3").forEach(element => {
+                element.style.fontSize = (currentFontSize + 4) + "px";
+            });
+
+            document.querySelectorAll("h2").forEach(element => {
+                element.style.fontSize = (currentFontSize + 10) + "px";
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
